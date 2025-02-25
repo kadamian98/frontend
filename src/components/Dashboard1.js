@@ -3,6 +3,7 @@ import axios from '../api/axiosConfig';
 import { useDrag, useDrop } from 'react-dnd';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+// eslint-disable-next-line
 import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Snackbar, Alert, Card, CardContent, Grid, Avatar, Button, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -135,7 +136,7 @@ const Dashboard1 = () => {
           </Typography>
           <Grid container spacing={1} sx={{ marginBottom: 1 }}>
             {faculties.map(faculty => (
-              <Grid item xs={6} sm={4} md={2} key={faculty._id}>
+              <Grid item xs={6} sm={3} md={1} key={faculty._id}>
                 <Faculty faculty={faculty} />
               </Grid>
             ))}
@@ -247,11 +248,8 @@ const Faculty = ({ faculty }) => {
 
   return (
     <StyledCard ref={drag} sx={{ opacity: isDragging ? 0.5 : 1, backgroundColor: facultyColors[faculty.name], color: 'white', cursor: 'pointer' }}>
-      <Avatar sx={{ bgcolor: facultyColors[faculty.name], marginRight: 2 }}>
-        {faculty.name.charAt(0)}
-      </Avatar>
       <CardContent>
-        <Typography variant="h6" component="div">
+        <Typography variant="h10" component="div">
           {faculty.name}
         </Typography>
       </CardContent>
