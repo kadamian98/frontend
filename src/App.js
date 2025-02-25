@@ -4,6 +4,7 @@ import { AppBar, Toolbar, Typography, Button, Box, IconButton, Switch } from '@m
 import MenuIcon from '@mui/icons-material/Menu';
 import Dashboard1 from './components/Dashboard1';
 import Dashboard2 from './components/Dashboard2';
+import Dashboard3 from './components/Dashboard3';
 import ThemeContextProvider, { ThemeContext } from './ThemeContext';
 
 const App = () => {
@@ -26,6 +27,9 @@ const App = () => {
             <Button color="inherit" component={Link} to="/dashboard2">
               VISTA FACULTADES
             </Button>
+            <Button color="inherit" component={Link} to="/dashboard3">
+              INTERCAMBIO
+            </Button>
             <Switch checked={darkMode} onChange={toggleDarkMode} color="default" />
           </Toolbar>
         </AppBar>
@@ -33,6 +37,7 @@ const App = () => {
           <Routes>
             <Route path="/dashboard1" element={<Dashboard1 />} />
             <Route path="/dashboard2" element={<Dashboard2 />} />
+            <Route path="/dashboard3" element={<Dashboard3 />} />
             {/* Agrega rutas para los otros dashboards */}
           </Routes>
         </Box>
