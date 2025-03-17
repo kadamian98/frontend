@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, Box, IconButton, Switch } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Dashboard1 from './components/Dashboard1';
 import Dashboard2 from './components/Dashboard2';
 import Dashboard3 from './components/Dashboard3';
+import Dashboard4 from './components/Dashboard4';
 import ThemeContextProvider, { ThemeContext } from './ThemeContext';
 
 const App = () => {
@@ -38,6 +39,8 @@ const App = () => {
             <Route path="/dashboard1" element={<Dashboard1 />} />
             <Route path="/dashboard2" element={<Dashboard2 />} />
             <Route path="/dashboard3" element={<Dashboard3 />} />
+            <Route path="/dashboard4" element={<Dashboard4 />} />
+            <Route path="*" element={<Navigate to="/" />} />
             {/* Agrega rutas para los otros dashboards */}
           </Routes>
         </Box>
