@@ -25,7 +25,7 @@ const App = () => {
             <Button color="inherit" component={Link} to="/dashboard1" sx={{ marginRight: 2 }}>
               DISTRIBUCIÓN
             </Button>
-            <Button color="inherit" component={Link} to="/dashboard2">
+            <Button color="inherit" component={Link} to="/dashboard2" sx={{ marginRight: 2 }}>
               VISTA FACULTADES
             </Button>
             <Button color="inherit" component={Link} to="/dashboard3">
